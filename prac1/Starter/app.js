@@ -21,6 +21,15 @@ myApp.config(function($routeProvider) {
   });
 });
 
+
+//Most Angular services, modules, (w.e gets injected) are singletons (one and only object)
+//It saves memory space
+//It is a singleton because it is there to fulfill the same purpose.
+//Custom services are singletons
+
+//Scope, on the otherhand, is an exception and is not a singleton.
+//When a scope is injected into the controller, a child scope is created
+//from the root scope.
 myApp.controller('mainController', ['$scope', '$location', '$log',
   function($scope, $location, $log) {
     
