@@ -16,6 +16,7 @@
         
         <!-- load angular via CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -24,7 +25,8 @@
 			<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">AngularJS</a>
+          <a class="navbar-brand" href="/">AngularJS</a>
+          <a class="navbar-brand" href="/index.htm#/second">Second</a>
 				</div>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -35,12 +37,15 @@
 		</header>
 
     <div class="container">
-      <div ng-controller="mainController">
+      <!-- <div ng-controller="mainController">
         <h1>{{name}}</h1>
       </div>
       <div ng-controller="secondController">
         <h1>{{name}}</h1>
-      </div>      
+      </div>       -->
+      <div ng-view>
+
+      </div>
 		</div>
 
     </body>
